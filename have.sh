@@ -11,7 +11,7 @@
 findByMD5(){
     sum=($(md5sum $1))
     while IFS= read -r j; do
-      echo "$1 is at $j"
+      echo "rm $j # Have at $1"
     done < <(grep ${sum} /mnt/diskstation/shared/index.txt | cut -c 35-)
 }
 
